@@ -37,3 +37,8 @@ h2 {
 #days-temperature {
   text-align: center;
 }
+small {
+  text-align: center;
+  font-size: 80%;
+  font-weight: 400;
+}
