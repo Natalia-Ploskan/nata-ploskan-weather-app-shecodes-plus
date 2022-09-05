@@ -49,6 +49,16 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
+.weather-temperature img {
+  margin-right: 10px;
+  height: 90px;
+  width: 90px;
+}
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
 a {
   color: #007bff;
   cursor: pointer;
