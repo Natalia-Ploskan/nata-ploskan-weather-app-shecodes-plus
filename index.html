@@ -14,11 +14,12 @@
       crossorigin="anonymous"
     />
  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+    
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="src/styles.css" />
   <head>
     <title>Natalia Ploskan weather app👩‍💻</title>
   </head>
@@ -44,6 +45,8 @@
     <h2 id="date">
       Time
     </h2>
+    <div class="d-flex weather-temperature">
+  <img src="" alt="Clear" id="icon" /></div>
     <div class="float-left">
       <span class="temperature" id="temperature">
       25
@@ -55,7 +58,14 @@
       </span>
 
     </div>
-
+    <div class="col-6">
+      <ul>
+        <li> Humidity;<span id="humidity"></span>%
+        </li>
+        <li>Wind:<span id="wind"></span>m/h</li>
+      </ul>
+    </div>
+<div class=".btn-group">
     <form class="search-form" id = "search-form">
       <input 
         type="search"
@@ -64,13 +74,14 @@
         placeholder="type the city for search"
       />
       <input type="submit" value="Search" class="btn" />
-    </form>
-    <button
+      <a href=""
                 class="btn btn-success btn-lg-"
                 id="current-location-button"
               >
                 Current Location
-              </button>
+    </a>
+    </form>
+</div>
 </div>
 <div class="hrefs">
   <small>
