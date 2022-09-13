@@ -4,7 +4,7 @@
     rgba(255, 255, 249, 0.6) 0%,
     rgb(160, 199, 254) 74.6%
   );
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 30px 50px;
   border-radius: 10px;
@@ -12,11 +12,9 @@
   border: 2px solid;
 }
 .btn-group {
-  float: left;
 }
 #city-input {
-  display: inline;
-  width: 50%;
+  width: 80%;
 }
 
 .btn {
@@ -24,8 +22,6 @@
   background-color: #007bff;
   border-color: #007bff;
   cursor: pointer;
-  margin: 10px;
-  left: 100px;
 }
 h1 {
   font-weight: 5px;
@@ -45,9 +41,12 @@ li {
   padding: 0;
 
   color: rgb(135, 135, 135);
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 100;
   line-height: 19px;
+}
+li:first-letter {
+  text-transform: capitalize;
 }
 .weather-temperature img {
   margin-right: 10px;
@@ -57,7 +56,6 @@ li {
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
-  top: -34px;
 }
 a {
   color: #007bff;
@@ -70,5 +68,4 @@ a {
   font-weight: 400;
 }
 #current-location-button {
-  width: 30%;
 }

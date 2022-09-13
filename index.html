@@ -25,8 +25,9 @@
   </head>
 
   <body>
+    <div class="container">
     <div class="weatherapp">
-    <div class="container" id="days-temperature">
+    <div id="days-temperature">
       <div class="row">
         <div class="col-2">
           Sun <br />
@@ -42,47 +43,61 @@
       Kyiv
     </h1>
     
-    <h2 id="date">
-      Time
-    </h2>
+    <ul>
+     <li>Last updated:<span id="date"></span></li>
+     <li id="description"></li>
+    </ul>
+    <div class="row">
+      <div class="col-6">
     <div class="d-flex weather-temperature">
-  <img src="animated/day.svg" alt="Clear" id="icon" /></div>
-    <div>
-      <span class="temperature" id="temperature">
+  <img src="" alt="Clear" id="icon" />
+  <div>
+      <strong class="temperature" id="temperature">
       25
-      </span>
+      </strong>
       <span class="units">
 <a href="" id="celsius-link">°C</a>
-<a href="" id="fahrenheit-link">°F</a>°
+<a href="" id="fahrenheit-link">°F</a>
       </span>
-
+</div>
     </div>
-    <div class="row">
-    <div class="col-2">
+    </div>
+    <div class="col-6">
       <ul>
       <li> Precipitation:<span id="presipitation"></span>%</li>
         <li> Humidity:<span id="humidity"></span>%
         </li>
-        <li>Wind:<span id="wind"></span>m/h</li>
+        <li>Wind:<span id="wind"></span>km/h</li>
       </ul>
     </div>
     </div>
-<div class=".btn-group">
-    <form class="search-form" id = "search-form">
+<div>
+    <form id = "search-form" class="mb-3">
+      <div class="row">
+        <div class="col-6">
       <input 
         type="search"
+        placeholder="Type a city..."
         class="form-control"
         id="city-input"
-        placeholder="type the city for search"
+        autocomplete="off"
       />
-      <input type="submit" value="Search" class="btn" />
-      <a href=""
-                class="btn btn-success btn-lg-"
+        </div>
+      <div class="col-3">
+      <input type="submit" value="Search" class="btn btn-primary w-100" />
+      </div>
+
+        <div class="col-2">
+      <button href=""
+                class="btn btn-success w-120"
                 id="current-location-button"
               >
-                Current Location
-    </a>
+              Geolocation
+        </div>
+      </button>
+    </div>
     </form>
+</div>
 </div>
 </div>
 <div class="hrefs">
