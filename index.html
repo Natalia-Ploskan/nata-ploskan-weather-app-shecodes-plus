@@ -13,7 +13,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
     <link
       rel="stylesheet"
@@ -27,17 +27,7 @@
   <body>
     <div class="container">
     <div class="weatherapp">
-    <div id="days-temperature">
-      <div class="row">
-        <div class="col-2">
-          Sun <br />
-          25°☀
-        </div>
-        <div class="col-2">Mon<br />21°⛅</div>
-        <div class="col-2">Tue<br />23°⛅</div>
-        <div class="col-2">Wed<br />16°🌧</div>
-        <div class="col-2">Thu<br />17°⛈</div>
-      </div>
+    <div class="weather-forecast" id="forecast">
     </div>
     <h1 id="city">
       Kyiv

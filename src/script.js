@@ -22,6 +22,37 @@ function formatDate(timestamp) {
 
   return `${days[dayIndex]} ${hours}:${minutes}`;
 }
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = `<div class = "row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${day}</div>
+          <img src=""
+          alt=""
+          width="42"/>
+          <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-temperature-max">25° </span>
+            <span class="weather-forecast-temperature-min">18°</span>
+          </div>
+        </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+function getForecast(coordinates) {
+  let apiKey = "3c082189faac84be221ca0ee1f2ba89c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
@@ -44,6 +75,7 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
 function searchCity(city) {
   let apiKey = "9ee64342a5185b2916d382c0f71b5f71";
@@ -94,4 +126,5 @@ form.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 let celsiusTemperature = null;
+
 searchCity("Kyiv");
